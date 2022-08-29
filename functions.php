@@ -19,7 +19,7 @@ defined( 'BAM_INC' ) or define( 'BAM_INC', get_template_directory() . '/inc/' );
 defined( 'BAM_URL' ) or define( 'BAM_URL', get_template_directory_uri() );
 
 // Theme Version
-defined( 'BAM_VERSION' ) or define( 'BAM_VERSION', '1.3.3' );
+defined( 'BAM_VERSION' ) or define( 'BAM_VERSION', '1.3.4' );
 
 defined( 'BAM_GMAP_API_KEY' ) or define( 'BAM_GMAP_API_KEY', 'AIzaSyDstOhGvliYV88yU24zUUNxDDA0sKzV6ng' );
 

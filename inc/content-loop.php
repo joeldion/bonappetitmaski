@@ -31,7 +31,7 @@ function bam_content_loop( $post_type ) {
         $website        = esc_html( get_post_meta( $id, "_bam_{$post_type}_website",  true ) );
         $menu           = $post_type === 'resto' ? esc_html( get_post_meta( $id, "_bam_resto_menu",  true ) ) : '';
         $hide_menu      = esc_attr( get_post_meta( $id, "_bam_resto_menu_hide",  true ) );
-        $btn_link       = !empty( $menu ) ? wp_get_attachment_url( $menu ) : $website;
+        $btn_link       = !empty( $menu ) ? wp_get_attachment_url( $menu ) . '?v=' . time() : $website;
         $btn_label      = !empty( $menu ) ? 'Menu' : 'En savoir plus';
         $desc           = esc_html( get_post_meta( $id, "_bam_{$post_type}_desc",     true ) ); 
  

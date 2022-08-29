@@ -1,5 +1,5 @@
 WP Theme Bon appétit Maski Change Log
-Version: 1.3.2
+Version: 1.3.4
 
 = 1.1.0 = 
 - Ajout d'une checkbox pour cacher le bouton "Menu"
@@ -40,3 +40,6 @@ Version: 1.3.2
 
 = 1.3.3 = 
 - Correction bug ajout de menus PDF des restaurants
+
+= 1.3.4 = 
+- Ajout d'un timestamp aux liens des menus PDF en cas de remplacement de fichiers
