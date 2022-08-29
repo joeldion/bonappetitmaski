@@ -1,0 +1,27 @@
+@use "../abstracts" as a;
+
+.logos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(min-content, 20rem));
+  column-gap: 8rem;
+  row-gap: 6rem;
+  align-items: center;
+  justify-content: center;
+
+  @include a.respond(screen_1200) {
+    grid-template-columns: repeat(2, minmax(min-content, 20rem));
+  }
+
+  @include a.respond(screen_767) {
+    grid-template-columns: 20rem;
+  }
+
+  &--3 {
+    grid-template-columns: repeat(3, minmax(min-content, 20rem));
+  }
+
+  &--2 {
+    grid-template-columns: repeat(2, minmax(min-content, 20rem));
+  }
+
+}

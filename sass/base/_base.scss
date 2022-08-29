@@ -1,0 +1,30 @@
+@use '../abstracts' as a;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+
+    @include a.respond(screen_500) {
+        font-size: 50%;
+    }
+}
+
+.container {
+    background-image: url('./img/bg/motifs.svg');
+    background-attachment: fixed;
+    // padding: 3rem 6rem;
+    display: grid;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}

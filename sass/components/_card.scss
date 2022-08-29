@@ -1,0 +1,82 @@
+@use '../abstracts' as a;
+
+.card {
+    @include a.section-content;
+    min-height: 46rem;
+    max-width: 40rem;
+
+    grid-template-rows: 22rem 1fr;
+
+    @include a.respond(screen_500) {
+        max-width: 45rem;
+    }
+
+    &--large {
+        grid-template-columns: 30rem 1fr;
+        max-width: 100%;
+    }
+
+    &__logo {
+        text-align: center;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            // max-width: 22rem;
+            // max-height: 19rem;
+            max-height: 20rem;
+            max-width: 30rem;
+            border-radius: 4rem;
+        }
+    }
+
+    &__content {
+        display: grid;
+        row-gap: 1.5rem;
+        font-size: 2.2rem;
+
+        @include a.respond(screen_500) {
+            row-gap: 3.4rem;
+        }
+    }
+
+    &__desc {
+        padding: 0 1rem;
+    }
+
+    &__title {
+        color: a.$color-secondary;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    &__btn {
+        padding: 1rem;
+        background-color: a.$color-secondary;
+        color: a.$color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: end;
+        border-radius: 2rem;
+        padding: 1rem 1.5rem;
+        margin: 2rem auto 0;
+        min-width: 12rem;
+        height: 5rem;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            color: a.$color-white;
+            background-color: a.$color-primary;
+        }
+
+        @include a.respond(screen_500) {
+            min-height: 7rem;
+            min-width: 14rem;
+            font-size: 3rem;
+        }
+    }
+}

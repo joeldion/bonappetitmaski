@@ -1,0 +1,43 @@
+@use '../abstracts' as a;
+
+.prod {
+    @include a.section-content;
+    grid-template-columns: 30rem 1fr;
+    //column-gap: 3rem;
+    padding: 4rem;
+    align-items: flex-start;
+
+    @include a.respond(screen_900) {
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+    }
+
+    @include a.respond(screen_500) {
+        padding: 3rem;
+    }
+
+    &__content {
+        display: grid;
+        row-gap: 3rem;
+    }
+
+    &__logo {
+        display: grid;
+        align-items: center;
+        height: 100%;
+
+        @include a.respond(screen_500) {
+            text-align: center;
+        }
+
+        img {
+            max-width: 25rem;
+        }
+    }
+
+    &__title {
+        @include a.respond(screen_500) {
+            text-align: center;
+        }
+    }
+}

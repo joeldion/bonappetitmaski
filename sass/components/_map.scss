@@ -1,0 +1,135 @@
+@use "../abstracts" as a;
+
+.map {
+    height: 100%;
+    border-radius: 3rem;
+
+    &-container {
+        max-width: 132rem;                   
+        // height: 70rem;
+        height: 90rem;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        // margin-top: 10rem;
+    }
+
+}
+
+.marker {
+    display: grid;
+    row-gap: 1.2rem;
+
+    &--hp {
+        a {
+            &:hover {
+                color: a.$color-primary
+            }
+        }        
+    }
+
+    &--bam {
+        a {
+            &:hover {
+                color: a.$color-secondary;
+            }
+        }        
+    }
+
+    &__title {
+
+        &--hp {
+            color: a.$color-primary;
+        }
+
+        &--bam {
+            color: a.$color-secondary;
+        }
+
+    }
+
+    a {
+        color: a.$color-dark-gray;
+    }
+
+}
+
+
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(2, 22rem);
+    column-gap: 10rem;
+    align-items: center;
+    justify-content: center;
+    height: 8rem;
+    font-size: 2.4rem;
+    color: a.$color-dark-gray;
+    font-family: a.$font-text;
+
+    @include a.respond(screen_767) {
+        grid-template-columns: 22rem;
+        margin-top: 2rem;
+        row-gap: 2rem;
+    }
+
+}
+
+.filter {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    column-gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+
+    &--hp {
+        color: a.$color-primary;
+    }
+
+    &--bam {
+        color: a.$color-secondary;
+    }
+
+    &__checkbox {        
+        width: 3rem;
+        height: 3rem;        
+        border-radius: 1rem 0 1rem;
+        position: relative;
+        transition: all .2s;
+
+        &--hp {
+            background-color: a.$color-primary;
+            border: 2px solid a.$color-primary;
+        }
+
+        &--bam {
+            background-color: a.$color-secondary;
+            border: 2px solid a.$color-secondary;
+        }
+    
+        &::before {
+            content: "";
+            width: 10px;
+            height: 1.8rem;
+            position: absolute;
+            // left: 6px;
+            // top: 2px;
+            // left: 9px;
+            // top: 3px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(40deg);
+            border-width: 2px;
+            border-style: solid;
+            border-width: 0px 4px 4px 0;
+            border-color: a.$color-white;
+        }
+    
+        &.unchecked {
+            background-color: a.$color-white;
+        }
+    
+    }
+
+}
+

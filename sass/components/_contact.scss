@@ -1,0 +1,16 @@
+@use '../abstracts' as a;
+
+.contact {
+    // display: flex;
+    // justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 3rem;
+
+    @include a.respond(screen_500) {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+        text-align: center;
+    }
+
+}

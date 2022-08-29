@@ -1,0 +1,12 @@
+/* BAM Admin Style */
+.bam-meta-box input:not([type='checkbox']),
+.bam-meta-box textarea {
+    min-width: 30rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    .bam-meta-box input:not([type='checkbox']),
+    .bam-meta-box textarea {
+        min-width: 100%;
+    }
+}

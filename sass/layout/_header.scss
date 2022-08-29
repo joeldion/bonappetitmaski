@@ -1,0 +1,101 @@
+@use '../abstracts' as a;
+
+.header {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2rem;
+    margin-top: 6rem;
+    @include a.page-padding;
+
+    @include a.respond(screen_500) {
+        margin-top: 4rem;
+    }
+
+    &__logo {
+        margin: 0 auto;
+        max-width: 30rem;
+
+        @include a.respond(screen_500) {
+            max-width: 26rem;
+        }
+    }
+
+    &__subtitle {
+        font-family: a.$font-text;
+        font-size: 2.4rem;
+        text-align: center;
+        color: a.$color-primary;
+
+        @include a.respond(screen_500) {
+            font-size: 2.8rem;
+        }
+    }
+}
+
+.nav {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 35rem);
+    column-gap: 1rem;
+    justify-content: center;
+
+    @include a.respond(screen_1200) {
+        grid-template-columns: repeat(3, 25rem);
+    }
+
+    @include a.respond(screen_900) {
+        //grid-template-columns: repeat(3, 15rem);
+        grid-template-columns: 30rem;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    @include a.respond(screen_500) {
+        // grid-template-columns: 15rem;
+        // grid-template-rows: repeat(3, 1fr);
+    }
+
+    &__item {
+        @include a.respond(screen_500) {
+            margin-bottom: 0;
+        }
+
+        a {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding: 3rem 0;
+            line-height: 1;
+            font-size: 2.8rem;
+            text-align: center;
+            flex-direction: column;
+
+            &::after {
+                content: '';
+                width: 10%;
+                height: 2px;
+                background-color: a.$color-primary;
+                position: absolute;
+                bottom: 1.5rem;
+                transition: all 0.2s ease-in-out;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &:hover {
+                &::after {
+                    width: 30%;
+                    background-color: a.$color-secondary;
+                }
+            }
+        }
+
+    }
+
+    &__subtitle {
+        font-size: 1.8rem;
+        margin: 1rem 0;
+    }
+
+}

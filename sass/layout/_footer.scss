@@ -1,0 +1,31 @@
+@use '../abstracts' as a;
+
+.footer {
+    margin-top: 6rem;
+
+    &__content {
+        // height: 12rem;
+        padding: 2rem;
+        background-color: a.$color-primary;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        color: a.$color-white;
+        font-size: 2rem;
+        grid-template-columns: repeat(2, max-content);
+        column-gap: 8rem;
+
+        @include a.respond(screen_767) {
+            grid-template-columns: max-content;
+            row-gap: 2rem;
+        }
+
+    }
+
+    &__logo {
+        img {
+            max-height: 8rem;
+        }
+    }
+
+}
