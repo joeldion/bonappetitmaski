@@ -85,12 +85,13 @@
 
             </section>
 
-            <section class="section section--map">
+            <section class="section section--map" id="itineraire">
 
                 <h2 class="section__title">Planifiez votre itinéraire gourmand</h2> 
 
                 <div class="section__desc">
                     <p>En plus des producteurs, plusieurs artistes et artisans de la région ouvriront leurs portes pour vous démontrer leur savoir-faire. Plus d'information : <a href="https://hangartspublics.com/" target="_blank" rel="noopener">hangartspublics.com</a></p>
+                    <p>Vous pouvez aussi faire la tournée confortablement assis en autobus au départ de Trois-Rivières avec <a href="https://www.escapademauricie.com/fr-ca/arts-et-tournee-gourmande-maskinonge" target="_blank" rel="noopener">Escapade Mauricie</a>.</p>
                 </div>
 
                 <div class="map-container">
