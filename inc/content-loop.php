@@ -55,10 +55,8 @@ function bam_content_loop( $post_type ) {
                 <?php endif; ?>                
                 <p class="card__desc"><?php echo $desc; ?></p>
                 <a href="<?php echo $gmap_url; ?>" class="card__address icon icon--location" target="_blank"><?php echo $full_address; ?></a>
-                <a href="<?php echo $phone_href; ?>" class="card__phone icon icon--phone"><?php echo $phone; ?></a> 
-                <?php if ( $hide_menu !== '1' ): ?>
-                <a href="<?php echo $btn_link; ?>" class="card__btn" target="_blank"><?php echo $btn_label; ?></a>
-                <?php endif; ?>
+                <a href="<?php echo $phone_href; ?>" class="card__phone icon icon--phone"><?php echo $phone; ?></a>                 
+                <a href="<?php echo $btn_link; ?>" class="card__btn<?php echo $hide_menu == '1' ? ' invisible' : ''; ?>" target="_blank"><?php echo $btn_label; ?></a>             
             </div>
         </div>
         <?php
