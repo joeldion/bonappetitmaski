@@ -75,7 +75,10 @@
                 <img src="<?php echo BAM_URL; ?>/img/logos/logo-bon-appetit-maski-prod.png" alt="Tournée des producteurs Bon appétit Maski" title="Tournée des producteurs Bon appétit Maski" height="235" width="300">
                 </h2>
 
-                <h3 class="section__subtitle"><?php esc_html_e( get_option( 'bam_prod_dates' ) ); ?></h3>
+                <h3 class="section__subtitle">
+                    <?php esc_html_e( get_option( 'bam_prod_dates' ) ); ?><br /> 
+                    <?php esc_html_e( get_option( 'bam_prod_hours' ) ); ?>
+                </h3>
 
                 <div class="section__desc">
                     <?php echo wpautop( get_option( 'bam_prod_text' ) ); ?>
