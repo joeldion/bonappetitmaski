@@ -43,3 +43,6 @@ Version: 1.3.4
 
 = 1.3.4 = 
 - Ajout d'un timestamp aux liens des menus PDF en cas de remplacement de fichiers
+
+= 1.3.5 =
+- Style "visibility: hidden" pour les menus de resto pour une meilleure présentation
