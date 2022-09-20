@@ -27,16 +27,16 @@ add_settings_field(
 );
 
 add_settings_field(
-    'bam_prod_hours',
+    'bam_prod_time',
     'Heures',
-    'bam_prod_hours_markup',
+    'bam_prod_time_markup',
     'bam-settings-page',
     'bam-settings-prod-section'
 );
 
 register_setting( 'bam-settings', 'bam_prod_text' );
 register_setting( 'bam-settings', 'bam_prod_dates' );
-register_setting( 'bam-settings', 'bam_prod_hours' );
+register_setting( 'bam-settings', 'bam_prod_time' );
 
 function home_prod_settings_section_callback() {}
 
@@ -60,8 +60,8 @@ function bam_prod_dates_markup() {
     <?php
 }
 
-function bam_prod_hours_markup() {
+function bam_prod_time_markup() {
     ?>
-    <input type="text" name="bam_prod_hours" id="bam_prod_hours" size="40" maxlength="30" value="<?php echo get_option( 'bam_prod_hours' ); ?>">
+    <input type="text" name="bam_prod_time" id="bam_prod_time" size="40" maxlength="30" value="<?php echo get_option( 'bam_prod_time' ); ?>">
     <?php
 }

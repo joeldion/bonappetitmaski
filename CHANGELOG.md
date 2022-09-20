@@ -46,3 +46,6 @@ Version: 1.3.5
 
 = 1.3.5 =
 - Style "visibility: hidden" pour les menus de resto pour une meilleure présentation
+
+= 1.4.0 =
+- Ajout d'un champ pour le heures (tournées des producteurs)

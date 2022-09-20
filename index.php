@@ -77,7 +77,7 @@
 
                 <h3 class="section__subtitle">
                     <?php esc_html_e( get_option( 'bam_prod_dates' ) ); ?><br /> 
-                    <?php esc_html_e( get_option( 'bam_prod_hours' ) ); ?>
+                    <?php esc_html_e( get_option( 'bam_prod_time' ) ); ?>
                 </h3>
 
                 <div class="section__desc">
