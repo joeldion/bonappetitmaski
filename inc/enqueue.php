@@ -30,19 +30,8 @@ function bam_enqueue() {
         true
     );
 
-    wp_register_script(
-        'google-maps',
-        'https://maps.googleapis.com/maps/api/js?key=' . BAM_GMAP_API_KEY . '&v=weekly',
-        [],
-        '1.0',
-        true
-    );
-
     wp_enqueue_style('bam-style');
     wp_enqueue_script('bam-script');
-    if ( get_option( 'bam_activate_map') === '1' ) {
-        wp_enqueue_script('google-maps');
-    }
 
     wp_localize_script(
         'bam-script',

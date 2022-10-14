@@ -178,12 +178,12 @@
                 <div class="logos logos--2">
 
                     <div class="logo">
-                        <a href="https://mrcmaskinonge.ca/" class="logo__link" target="_blank" rel="noopener">
+                        <a href="https://mrcmaskinonge.ca/" class="logo__link" target="_blank" rel="noopener" aria-label="MRC de Maskinongé">
                             <img src="<?php echo BAM_URL; ?>/img/logos/logo-mrc-maskinonge.svg" alt="MRC de Maskinongé" class="logo__img" width="200">
                         </a>
                     </div> 
                     <div class="logo">
-                        <a href="https://www.maski.quebec/tourisme/" class="logo__link" target="_blank" rel="noopener">
+                        <a href="https://tourismemaskinonge.com/" class="logo__link" target="_blank" rel="noopener" aria-label="Tourisme Maskinongé">
                             <img src="<?php echo BAM_URL; ?>/img/logos/logo-tourisme-maskinonge.svg" alt="Tourisme Maskinongé" class="logo__img" width="200">
                         </a>
                     </div>

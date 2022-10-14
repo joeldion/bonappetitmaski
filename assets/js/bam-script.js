@@ -79,7 +79,7 @@ let markerCategories = { 'hp': true, 'bam': true };
 
 function initMap() {   
 
-    if (!googleMap) return false; 
+    if (typeof google === 'undefined') return false;
 
     setTimeout(function() {
 
