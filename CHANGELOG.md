@@ -49,3 +49,6 @@ Version: 1.3.5
 
 = 1.4.0 =
 - Ajout d'un champ pour le heures (tournées des producteurs)
+
+= 1.5.0 =
+- Ajout d'une option pour activer/désactiver la carte
