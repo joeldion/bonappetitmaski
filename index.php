@@ -88,6 +88,8 @@
 
             </section>
 
+            <?php if ( get_option( 'bam_activate_map') === '1' ): ?>
+
             <section class="section section--map" id="itineraire">
 
                 <h2 class="section__title">Planifiez votre itinéraire gourmand</h2> 
@@ -112,6 +114,8 @@
                 </div>  
 
             </section>
+
+            <?php endif; ?>
 
             <section class="section section--listing" id="restaurants">
 
