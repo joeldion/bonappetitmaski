@@ -6,7 +6,7 @@
 add_settings_section(
     'bam-settings-prod-section',
     'Section Producteurs',
-    'home_prod_settings_section_callback',
+    'bam_prod_settings_section_callback',
     'bam-settings-page'
 );
 
@@ -38,7 +38,7 @@ register_setting( 'bam-settings', 'bam_prod_text' );
 register_setting( 'bam-settings', 'bam_prod_dates' );
 register_setting( 'bam-settings', 'bam_prod_time' );
 
-function home_prod_settings_section_callback() {}
+function bam_prod_settings_section_callback() {}
 
 function bam_prod_text_markup() {
 

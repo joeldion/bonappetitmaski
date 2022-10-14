@@ -42,5 +42,6 @@ function bam_settings_init() {
     require_once( BAM_INC . 'settings/sections/section-intro.php' );
     require_once( BAM_INC . 'settings/sections/section-prod.php' );
     require_once( BAM_INC . 'settings/sections/section-resto.php' );
+    require_once( BAM_INC . 'settings/sections/section-map.php' );
     require_once( BAM_INC . 'settings/sections/section-contact.php' );
 }

@@ -208,6 +208,8 @@
 
         <a href="#" class="back-to-top" id="back-to-top"></a>
 
-        <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo BAM_GMAP_API_KEY; ?>&callback=initMap&v=weekly" defer></script>
+        <?php if ( get_option( 'bam_activate_map') === '1' ): ?>
+                <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo BAM_GMAP_API_KEY; ?>&callback=initMap&v=weekly" defer></script>
+        <?php endif; ?>
     </body>
 </html>

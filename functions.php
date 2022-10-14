@@ -19,7 +19,7 @@ defined( 'BAM_INC' ) or define( 'BAM_INC', get_template_directory() . '/inc/' );
 defined( 'BAM_URL' ) or define( 'BAM_URL', get_template_directory_uri() );
 
 // Theme Version
-defined( 'BAM_VERSION' ) or define( 'BAM_VERSION', '1.4.1' );
+defined( 'BAM_VERSION' ) or define( 'BAM_VERSION', '1.5.0' );
 
 defined( 'BAM_GMAP_API_KEY' ) or define( 'BAM_GMAP_API_KEY', 'AIzaSyDstOhGvliYV88yU24zUUNxDDA0sKzV6ng' );
 
@@ -67,21 +67,3 @@ require_once( BAM_INC . 'resto/resto-init.php' );
 // require_once( BAM_INC . 'google-map/get-markers-data.php' );
 // require_once( BAM_INC . 'google-map/update-json-data.php' );
 require_once( BAM_INC . 'google-map/google-map-init.php' );
-
-/*
- * Temporary redirect
- */
-
-function is_login_page() {
-    return in_array( $GLOBALS['pagenow'], ['wp-login.php', 'wp-admin.php'] );
-}
-
-function redirect_if_user_not_logged_in() {
-
-    if ( !is_user_logged_in() && !is_login_page() ) {
-        wp_redirect( 'https://www.maski.quebec/tourisme/bon-appetit-maski/' ); 
-        exit;
-    }
-
-}
-// add_action( 'init', 'redirect_if_user_not_logged_in' );

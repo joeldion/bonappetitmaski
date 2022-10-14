@@ -6,7 +6,7 @@
 add_settings_section(
     'bam-settings-resto-section',
     'Section Restaurateurs',
-    'home_resto_settings_section_callback',
+    'bam_resto_settings_section_callback',
     'bam-settings-page'
 );
 
@@ -30,7 +30,7 @@ register_setting( 'bam-settings', 'bam_resto_text' );
 register_setting( 'bam-settings', 'bam_resto_dates' );
 
 
-function home_resto_settings_section_callback() {}
+function bam_resto_settings_section_callback() {}
 
 function bam_resto_text_markup() {
 

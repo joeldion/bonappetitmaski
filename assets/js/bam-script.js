@@ -1,5 +1,6 @@
-"use strict";
+'use strict';
 
+const googleMap = typeof google !== 'undefined' ? true : false;
 let locationsBAM = [];
 let locationsHP = [];
 const jsonDataFiles = {
@@ -22,7 +23,6 @@ const jsonDataFiles = {
             $.each(data, function(key, val) {
                 file.locationsArray.push(val);
             });
-            // console.log(file.locationsArray);
         });
     }
 
@@ -42,14 +42,6 @@ window.onload = function() {
             });
         });
     }
-
-    // Images lazy load
-    // const cardImages = document.querySelectorAll('.card__logo img');
-    // for (let i = 0; i < cardImages.length; i++) {
-    //     let img = cardImages[i];
-    //     img.src = img.dataset['src'];
-    //     img.srcset = img.dataset['srcset'];
-    // }
 
     // Back to top button
     const backToTop = document.getElementById("back-to-top");
@@ -86,6 +78,8 @@ window.addEventListener(
 let markerCategories = { 'hp': true, 'bam': true };
 
 function initMap() {   
+
+    if (!googleMap) return false; 
 
     setTimeout(function() {
 
@@ -176,18 +170,20 @@ function initMap() {
 
 // Google Map Filters
 const filters = document.querySelectorAll('.filter');
-for (let i = 0; i < filters.length; i++) {
-    filters[i].addEventListener('click', function(){
-        let cat = filters[i].dataset.cat;
-        let checkbox = filters[i].querySelector('.filter__checkbox');
-        if (!markerCategories[cat]) {
-            markerCategories[cat] = true;
-            checkbox.classList.remove('unchecked');
-        } else {
-            markerCategories[cat] = false;
-            checkbox.classList.add('unchecked');
-        }
-        initMap();
-    });
-    
+if (filters) {
+    for (let i = 0; i < filters.length; i++) {
+        filters[i].addEventListener('click', function(){
+            let cat = filters[i].dataset.cat;
+            let checkbox = filters[i].querySelector('.filter__checkbox');
+            if (!markerCategories[cat]) {
+                markerCategories[cat] = true;
+                checkbox.classList.remove('unchecked');
+            } else {
+                markerCategories[cat] = false;
+                checkbox.classList.add('unchecked');
+            }
+            initMap();
+        });
+        
+    }
 }

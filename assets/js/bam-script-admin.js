@@ -1,5 +1,7 @@
 'use strict';
 
+const googleMap = typeof google !== 'undefined' ? true : false;
+
 window.onload = function() {
     initMap();
 }
@@ -8,6 +10,8 @@ window.onload = function() {
  *  Get coordinates
  */
 function initMap() {
+
+    if (!googleMap) return false;
 
     const address = document.getElementById('bam-address');
     const city = document.getElementById('bam-city');
