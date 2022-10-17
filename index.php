@@ -39,15 +39,15 @@
             <nav class="header__nav" role="navigation">
                 <ul class="nav">
                     <li class="nav__item">
-                        <a href="#" data-target="#producteurs">
+                        <a href="#" data-target="#restaurants">
                             <?php esc_html_e( get_option( 'bam_menu_item_text_1' ) ); ?>
-                            <span class="nav__subtitle"><?php esc_html_e( get_option( 'bam_prod_dates' ) ); ?></span>
+                            <span class="nav__subtitle"><?php esc_html_e( get_option( 'bam_resto_dates' ) ); ?></span>
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" data-target="#restaurants">
+                        <a href="#" data-target="#producteurs">
                             <?php esc_html_e( get_option( 'bam_menu_item_text_2' ) ); ?>                        
-                            <span class="nav__subtitle"><?php esc_html_e( get_option( 'bam_resto_dates' ) ); ?></span>                            
+                            <span class="nav__subtitle"><?php esc_html_e( get_option( 'bam_prod_dates' ) ); ?></span>                            
                         </a>
                     </li>    
                     <li class="nav__item">
@@ -67,6 +67,24 @@
                 <div class="section__desc">
                     <?php echo wpautop( get_option( 'bam_intro_text' ) ); ?>
                 </div>
+            </section>
+
+            <section class="section section--listing" id="restaurants">
+
+                <?php /* <h2 class="section__title">Événement gourmand en restaurant</h2> */ ?>
+
+                <h2 class="section__logo">
+                    <img src="<?php echo BAM_URL; ?>/img/logos/logo-bon-appetit-maski-resto.png" alt="Événement gourmand en restaurant Bon appétit Maski" title="Événement gourmand en restaurant Bon appétit Maski" height="235" width="300">
+                </h2>
+
+                <h3 class="section__subtitle"><?php esc_html_e( get_option( 'bam_resto_dates' ) ); ?></h3>
+
+                <div class="section__desc">
+                    <?php echo wpautop( get_option( 'bam_resto_text' ) ); ?>
+                </div>
+
+                <?php echo bam_content_loop( 'resto' ); ?>
+
             </section>
 
             <section class="section section--listing" id="producteurs">
@@ -116,24 +134,6 @@
             </section>
 
             <?php endif; ?>
-
-            <section class="section section--listing" id="restaurants">
-
-                <?php /* <h2 class="section__title">Événement gourmand en restaurant</h2> */ ?>
-
-                <h2 class="section__logo">
-                    <img src="<?php echo BAM_URL; ?>/img/logos/logo-bon-appetit-maski-resto.png" alt="Événement gourmand en restaurant Bon appétit Maski" title="Événement gourmand en restaurant Bon appétit Maski" height="235" width="300">
-                </h2>
-
-                <h3 class="section__subtitle"><?php esc_html_e( get_option( 'bam_resto_dates' ) ); ?></h3>
-
-                <div class="section__desc">
-                    <?php echo wpautop( get_option( 'bam_resto_text' ) ); ?>
-                </div>
-
-                <?php echo bam_content_loop( 'resto' ); ?>
-
-            </section>
 
             <section class="section section--contact" id="contact">
 
