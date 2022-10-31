@@ -1,5 +1,5 @@
 WP Theme Bon appétit Maski Change Log
-Version: 1.3.5
+Version: 1.5.2
 
 = 1.1.0 = 
 - Ajout d'une checkbox pour cacher le bouton "Menu"
@@ -52,3 +52,6 @@ Version: 1.3.5
 
 = 1.5.0 =
 - Ajout d'une option pour activer/désactiver la carte
+
+= 1.5.2 = 
+- Logos plus grands

@@ -169,7 +169,7 @@
                     </div>
                     <div class="logo">
                         <a href="https://www.sadcmaskinonge.qc.ca/" class="logo__link" target="_blank" rel="noopener">
-                            <img src="<?php echo BAM_URL; ?>/img/logos/logo-sadc-mrc-maskinonge.png" alt="SADC de la MRC de Maskinongé" class="logo__img" width="200">
+                            <img src="<?php echo BAM_URL; ?>/img/logos/logo-sadc-maskinonge-canada.png" alt="SADC de la MRC de Maskinongé" class="logo__img" width="275">
                         </a>
                     </div>
 
